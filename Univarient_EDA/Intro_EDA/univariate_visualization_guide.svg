@@ -1,0 +1,501 @@
+<svg viewBox="0 0 1200 1100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4fc3f7"/>
+      <stop offset="50%" style="stop-color:#29b6f6"/>
+      <stop offset="100%" style="stop-color:#03a9f4"/>
+    </linearGradient>
+    
+    <linearGradient id="numericalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#66bb6a"/>
+      <stop offset="100%" style="stop-color:#4caf50"/>
+    </linearGradient>
+    
+    <linearGradient id="categoricalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff7043"/>
+      <stop offset="100%" style="stop-color:#ff5722"/>
+    </linearGradient>
+    
+    <linearGradient id="bivariateGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ab47bc"/>
+      <stop offset="100%" style="stop-color:#7b1fa2"/>
+    </linearGradient>
+    
+    <linearGradient id="multivariateGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffd54f"/>
+      <stop offset="100%" style="stop-color:#ffb300"/>
+    </linearGradient>
+    
+    <linearGradient id="dataQualityGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#26a69a"/>
+      <stop offset="100%" style="stop-color:#00897b"/>
+    </linearGradient>
+    
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3748;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#1a202c;stop-opacity:0.95"/>
+    </linearGradient>
+    
+    <!-- Glow Filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="2400" fill="url(#bgGradient)"/>
+  
+  <!-- Main Title -->
+  <text x="700" y="70" text-anchor="middle" fill="url(#titleGradient)" font-family="Arial, sans-serif" font-size="48" font-weight="bold" filter="url(#glow)">
+    UNIVARIATE ANALYSIS
+  </text>
+  
+  <!-- Connectors for Hierarchy -->
+  <path d="M700,100 V200 M80,200 H1120" stroke="#4fc3f7" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- I. Univariate Analysis Section -->
+  <g id="univariateSection">
+   
+    
+    <!-- Numerical Data Subsection -->
+    <g id="numericalSubsection">
+      <rect x="80" y="200" width="300" height="40" rx="10" fill="url(#numericalGradient)" opacity="0.2"/>
+      <text x="230" y="225" text-anchor="middle" fill="url(#numericalGradient)" font-family="Arial, sans-serif" font-size="20">
+        Numerical Data
+      </text>
+      
+      <!-- Histogram (Unchanged) -->
+      <g id="histogram" transform="translate(80, 260)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#4fc3f7" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <rect x="10" y="60" width="12" height="20" fill="#66bb6a"/>
+          <rect x="25" y="45" width="12" height="35" fill="#4caf50"/>
+          <rect x="40" y="30" width="12" height="50" fill="#2e7d32"/>
+          <rect x="55" y="40" width="12" height="40" fill="#4caf50"/>
+          <rect x="70" y="55" width="12" height="25" fill="#66bb6a"/>
+          <rect x="85" y="65" width="12" height="15" fill="#81c784"/>
+          <rect x="100" y="70" width="12" height="10" fill="#a5d6a7"/>
+          <line x1="8" y1="82" x2="115" y2="82" stroke="#fff" stroke-width="1"/>
+          <line x1="8" y1="15" x2="8" y2="82" stroke="#fff" stroke-width="1"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          Histogram
+        </text>
+      </g>
+      
+      <!-- Box Plot (Unchanged) -->
+      <g id="boxplot" transform="translate(260, 260)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#4fc3f7" stroke-width="1"/>
+        <g transform="translate(15, 25)">
+          <line x1="20" y1="35" x2="120" y2="35" stroke="#4caf50" stroke-width="3"/>
+          <rect x="40" y="25" width="60" height="20" fill="none" stroke="#4caf50" stroke-width="2"/>
+          <line x1="70" y1="25" x2="70" y2="45" stroke="#4caf50" stroke-width="2"/>
+          <line x1="18" y1="30" x2="22" y2="30" stroke="#4caf50" stroke-width="2"/>
+          <line x1="18" y1="40" x2="22" y2="40" stroke="#4caf50" stroke-width="2"/>
+          <line x1="118" y1="30" x2="122" y2="30" stroke="#4caf50" stroke-width="2"/>
+          <line x1="118" y1="40" x2="122" y2="40" stroke="#4caf50" stroke-width="2"/>
+          <circle cx="25" cy="20" r="2" fill="#ff7043"/>
+          <circle cx="115" cy="50" r="2" fill="#ff7043"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          Box Plot
+        </text>
+      </g>
+      
+      <!-- KDE Plot (Unchanged) -->
+      <g id="kde" transform="translate(80, 380)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#4fc3f7" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <path d="M10,70 Q30,30 50,40 T90,50 T130,70" stroke="#4caf50" stroke-width="3" fill="none"/>
+          <path d="M10,70 Q30,30 50,40 T90,50 T130,70 L130,80 L10,80 Z" fill="#4caf50" opacity="0.3"/>
+          <line x1="8" y1="82" x2="135" y2="82" stroke="#fff" stroke-width="1"/>
+          <line x1="8" y1="15" x2="8" y2="82" stroke="#fff" stroke-width="1"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          KDE Plot
+        </text>
+      </g>
+      
+      <!-- Violin Plot (Unchanged) -->
+      <g id="violin" transform="translate(260, 380)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#4fc3f7" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <path d="M70,15 Q85,25 90,35 Q85,45 90,55 Q85,65 70,75 Q55,65 60,55 Q55,45 60,35 Q55,25 70,15" 
+                fill="#4caf50" opacity="0.6" stroke="#4caf50" stroke-width="2"/>
+          <rect x="67" y="30" width="6" height="30" fill="#2e7d32"/>
+          <line x1="70" y1="35" x2="70" y2="55" stroke="#fff" stroke-width="2"/>
+          <line x1="67" y1="45" x2="73" y2="45" stroke="#fff" stroke-width="1"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          Violin Plot
+        </text>
+      </g>
+      
+      <!-- Rug Plot (Unchanged) -->
+      <g id="rug" transform="translate(80, 500)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#4fc3f7" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <line x1="8" y1="70" x2="132" y2="70" stroke="#fff" stroke-width="2"/>
+          <line x1="25" y1="65" x2="25" y2="75" stroke="#4caf50" stroke-width="2"/>
+          <line x1="35" y1="65" x2="35" y2="75" stroke="#4caf50" stroke-width="2"/>
+          <line x1="45" y1="65" x2="45" y2="75" stroke="#4caf50" stroke-width="2"/>
+          <line x1="50" y1="65" x2="50" y2="75" stroke="#4caf50" stroke-width="2"/>
+          <line x1="60" y1="65" x2="60" y2="75" stroke="#4caf50" stroke-width="2"/>
+          <line x1="70" y1="65" x2="70" y2="75" stroke="#4caf50" stroke-width="2"/>
+          <line x1="80" y1="65" x2="80" y2="75" stroke="#4caf50" stroke-width="2"/>
+          <line x1="90" y1="65" x2="90" y2="75" stroke="#4caf50" stroke-width="2"/>
+          <line x1="105" y1="65" x2="105" y2="75" stroke="#4caf50" stroke-width="2"/>
+          <line x1="115" y1="65" x2="115" y2="75" stroke="#4caf50" stroke-width="2"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          Rug Plot
+        </text>
+      </g>
+      
+      <!-- Stem-and-Leaf Plot (Unchanged) -->
+      <g id="stem" transform="translate(260, 500)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#4fc3f7" stroke-width="1"/>
+        <g transform="translate(15, 20)">
+          <text x="20" y="15" fill="#4caf50" font-family="monospace" font-size="10">2 | 3 7 8</text>
+          <text x="20" y="30" fill="#4caf50" font-family="monospace" font-size="10">3 | 1 4 5 9</text>
+          <text x="20" y="45" fill="#4caf50" font-family="monospace" font-size="10">4 | 0 2 6</text>
+          <text x="20" y="60" fill="#4caf50" font-family="monospace" font-size="10">5 | 1 8</text>
+          <line x1="35" y1="10" x2="35" y2="65" stroke="#fff" stroke-width="1"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+          Stem-and-Leaf Plot
+        </text>
+      </g>
+      
+      <!-- Q-Q Plot (Unchanged) -->
+      <g id="qqplot" transform="translate(80, 620)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#4fc3f7" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <line x1="8" y1="82" x2="132" y2="82" stroke="#fff" stroke-width="1"/>
+          <line x1="8" y1="15" x2="8" y2="82" stroke="#fff" stroke-width="1"/>
+          <line x1="15" y1="75" x2="125" y2="20" stroke="#ff7043" stroke-width="2" stroke-dasharray="3,3"/>
+          <circle cx="25" cy="70" r="2" fill="#4caf50"/>
+          <circle cx="35" cy="65" r="2" fill="#4caf50"/>
+          <circle cx="45" cy="55" r="2" fill="#4caf50"/>
+          <circle cx="55" cy="50" r="2" fill="#4caf50"/>
+          <circle cx="65" cy="45" r="2" fill="#4caf50"/>
+          <circle cx="75" cy="40" r="2" fill="#4caf50"/>
+          <circle cx="85" cy="35" r="2" fill="#4caf50"/>
+          <circle cx="95" cy="30" r="2" fill="#4caf50"/>
+          <circle cx="105" cy="25" r="2" fill="#4caf50"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+          Q-Q Plot
+        </text>
+      </g>
+      
+      <!-- Dot Plot (Unchanged) -->
+      <g id="dotplot" transform="translate(260, 620)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#4fc3f7" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <line x1="8" y1="75" x2="132" y2="75" stroke="#fff" stroke-width="1"/>
+          <circle cx="25" cy="75" r="3" fill="#4caf50"/>
+          <circle cx="35" cy="75" r="3" fill="#4caf50"/>
+          <circle cx="45" cy="75" r="3" fill="#4caf50"/>
+          <circle cx="45" cy="67" r="3" fill="#4caf50"/>
+          <circle cx="55" cy="75" r="3" fill="#4caf50"/>
+          <circle cx="55" cy="67" r="3" fill="#4caf50"/>
+          <circle cx="55" cy="59" r="3" fill="#4caf50"/>
+          <circle cx="65" cy="75" r="3" fill="#4caf50"/>
+          <circle cx="65" cy="67" r="3" fill="#4caf50"/>
+          <circle cx="75" cy="75" r="3" fill="#4caf50"/>
+          <circle cx="85" cy="75" r="3" fill="#4caf50"/>
+          <circle cx="95" cy="75" r="3" fill="#4caf50"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          Dot Plot
+        </text>
+      </g>
+      
+      <!-- ECDF Plot (Unchanged) -->
+      <g id="ecdf" transform="translate(80, 740)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#4fc3f7" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <line x1="8" y1="82" x2="132" y2="82" stroke="#fff" stroke-width="1"/>
+          <line x1="8" y1="15" x2="8" y2="82" stroke="#fff" stroke-width="1"/>
+          <path d="M15,75 L25,75 L25,65 L35,65 L35,55 L45,55 L45,45 L55,45 L55,35 L65,35 L65,25 L75,25 L75,20 L125,20" 
+                stroke="#4caf50" stroke-width="3" fill="none"/>
+          <text x="70" y="12" fill="#4caf50" font-family="Arial, sans-serif" font-size="8">1.0</text>
+          <text x="5" y="85" fill="#4caf50" font-family="Arial, sans-serif" font-size="8">0</text>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          ECDF Plot
+        </text>
+      </g>
+      
+      <!-- Ridgeline Plot (Unchanged) -->
+      <g id="ridgeline" transform="translate(260, 740)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#4fc3f7" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <path d="M15,65 Q35,50 55,55 T95,65 L95,70 L15,70 Z" fill="#4caf50" opacity="0.6"/>
+          <path d="M15,50 Q35,35 55,40 T95,50 L95,55 L15,55 Z" fill="#66bb6a" opacity="0.6"/>
+          <path d="M15,35 Q35,20 55,25 T95,35 L95,40 L15,40 Z" fill="#81c784" opacity="0.6"/>
+          <path d="M15,65 Q35,50 55,55 T95,65" stroke="#4caf50" stroke-width="2" fill="none"/>
+          <path d="M15,50 Q35,35 55,40 T95,50" stroke="#66bb6a" stroke-width="2" fill="none"/>
+          <path d="M15,35 Q35,20 55,25 T95,35" stroke="#81c784" stroke-width="2" fill="none"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+          Ridgeline Plot
+        </text>
+      </g>
+      
+      <!-- Frequency Polygon (New) -->
+      <g id="freqpoly" transform="translate(80, 860)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#4fc3f7" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <line x1="8" y1="82" x2="132" y2="82" stroke="#fff" stroke-width="1"/>
+          <line x1="8" y1="15" x2="8" y2="82" stroke="#fff" stroke-width="1"/>
+          <path d="M15,75 L30,60 L45,45 L60,55 L75,65 L90,50 L105,60 L120,70" stroke="#4caf50" stroke-width="3" fill="none"/>
+          <circle cx="15" cy="75" r="2" fill="#4caf50"/>
+          <circle cx="30" cy="60" r="2" fill="#4caf50"/>
+          <circle cx="45" cy="45" r="2" fill="#4caf50"/>
+          <circle cx="60" cy="55" r="2" fill="#4caf50"/>
+          <circle cx="75" cy="65" r="2" fill="#4caf50"/>
+          <circle cx="90" cy="50" r="2" fill="#4caf50"/>
+          <circle cx="105" cy="60" r="2" fill="#4caf50"/>
+          <circle cx="120" cy="70" r="2" fill="#4caf50"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+          Frequency Polygon
+        </text>
+      </g>
+      
+      <!-- Probability Plot (New) -->
+      <g id="probplot" transform="translate(260, 860)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#4fc3f7" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <line x1="8" y1="82" x2="132" y2="82" stroke="#fff" stroke-width="1"/>
+          <line x1="8" y1="15" x2="8" y2="82" stroke="#fff" stroke-width="1"/>
+          <line x1="15" y1="75" x2="125" y2="20" stroke="#ff7043" stroke-width="2" stroke-dasharray="3,3"/>
+          <circle cx="25" cy="70" r="3" fill="#4caf50"/>
+          <circle cx="35" cy="60" r="3" fill="#4caf50"/>
+          <circle cx="45" cy="50" r="3" fill="#4caf50"/>
+          <circle cx="55" cy="45" r="3" fill="#4caf50"/>
+          <circle cx="65" cy="40" r="3" fill="#4caf50"/>
+          <circle cx="75" cy="35" r="3" fill="#4caf50"/>
+          <circle cx="85" cy="30" r="3" fill="#4caf50"/>
+          <circle cx="95" cy="25" r="3" fill="#4caf50"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+          Probability Plot
+        </text>
+      </g>
+    </g>
+    
+    <!-- Categorical Data Subsection -->
+    <g id="categoricalSubsection">
+      <rect x="450" y="200" width="300" height="40" rx="10" fill="url(#categoricalGradient)" opacity="0.2"/>
+      <text x="600" y="225" text-anchor="middle" fill="url(#categoricalGradient)" font-family="Arial, sans-serif" font-size="20">
+        Categorical Data
+      </text>
+      
+      <!-- Bar Chart (Unchanged) -->
+      <g id="barchart" transform="translate(450, 260)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#ff7043" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <rect x="15" y="50" width="15" height="30" fill="#ff7043"/>
+          <rect x="35" y="35" width="15" height="45" fill="#ff5722"/>
+          <rect x="55" y="40" width="15" height="40" fill="#d84315"/>
+          <rect x="75" y="25" width="15" height="55" fill="#ff5722"/>
+          <rect x="95" y="55" width="15" height="25" fill="#ff7043"/>
+          <line x1="12" y1="82" x2="115" y2="82" stroke="#fff" stroke-width="1"/>
+          <line x1="12" y1="15" x2="12" y2="82" stroke="#fff" stroke-width="1"/>
+          <text x="22" y="92" fill="#fff" font-family="Arial, sans-serif" font-size="6">A</text>
+          <text x="42" y="92" fill="#fff" font-family="Arial, sans-serif" font-size="6">B</text>
+          <text x="62" y="92" fill="#fff" font-family="Arial, sans-serif" font-size="6">C</text>
+          <text x="82" y="92" fill="#fff" font-family="Arial, sans-serif" font-size="6">D</text>
+          <text x="102" y="92" fill="#fff" font-family="Arial, sans-serif" font-size="6">E</text>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          Bar Chart
+        </text>
+      </g>
+      
+      <!-- Count Plot (Unchanged) -->
+      <g id="countplot" transform="translate(630, 260)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#ff7043" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <rect x="20" y="60" width="12" height="20" fill="#ff7043"/>
+          <rect x="35" y="45" width="12" height="35" fill="#ff5722"/>
+          <rect x="50" y="30" width="12" height="50" fill="#d84315"/>
+          <rect x="65" y="40" width="12" height="40" fill="#ff5722"/>
+          <rect x="80" y="55" width="12" height="25" fill="#ff7043"/>
+          <rect x="95" y="50" width="12" height="30" fill="#ff7043"/>
+          <line x1="18" y1="82" x2="110" y2="82" stroke="#fff" stroke-width="1"/>
+          <line x1="18" y1="15" x2="18" y2="82" stroke="#fff" stroke-width="1"/>
+          <text x="70" y="12" fill="#ff7043" font-family="Arial, sans-serif" font-size="8">Count</text>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          Count Plot
+        </text>
+      </g>
+      
+      <!-- Pie Chart (Unchanged) -->
+      <g id="piechart" transform="translate(450, 380)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#ff7043" stroke-width="1"/>
+        <g transform="translate(80, 45)">
+          <circle cx="0" cy="0" r="30" fill="#ff7043" stroke="none"/>
+          <path d="M0,-30 A30,30 0 0,1 21.21,-21.21 L0,0 Z" fill="#ff5722"/>
+          <path d="M21.21,-21.21 A30,30 0 0,1 30,0 L0,0 Z" fill="#d84315"/>
+          <path d="M30,0 A30,30 0 0,1 0,30 L0,0 Z" fill="#bf360c"/>
+          <path d="M0,30 A30,30 0 1,1 0,-30 L0,0 Z" fill="#ff8a65"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          Pie Chart
+        </text>
+      </g>
+      
+      <!-- Pareto Chart (Unchanged) -->
+      <g id="pareto" transform="translate(630, 380)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#ff7043" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <rect x="15" y="25" width="12" height="55" fill="#ff5722"/>
+          <rect x="30" y="35" width="12" height="45" fill="#ff7043"/>
+          <rect x="45" y="50" width="12" height="30" fill="#ff8a65"/>
+          <rect x="60" y="60" width="12" height="20" fill="#ffab91"/>
+          <rect x="75" y="70" width="12" height="10" fill="#ffccbc"/>
+          <line x1="12" y1="82" x2="92" y2="82" stroke="#fff" stroke-width="1"/>
+          <path d="M21,20 L36,25 L51,35 L66,45 L81,60" stroke="#4fc3f7" stroke-width="2" fill="none"/>
+          <line x1="95" y1="15" x2="95" y2="82" stroke="#4fc3f7" stroke-width="1"/>
+Contents of artifact_id: 3b07861e-fb10-4a99-8b77-607846f60e94 (Comprehensive EDA Visualization)
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          Pareto Chart
+        </text>
+      </g>
+      
+      <!-- Treemap (Unchanged) -->
+      <g id="treemap" transform="translate(450, 500)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#ff7043" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <rect x="5" y="5" width="50" height="35" fill="#ff5722" stroke="#fff" stroke-width="1"/>
+          <rect x="60" y="5" width="75" height="35" fill="#ff7043" stroke="#fff" stroke-width="1"/>
+          <rect x="5" y="45" width="35" height="30" fill="#d84315" stroke="#fff" stroke-width="1"/>
+          <rect x="45" y="45" width="45" height="30" fill="#ff8a65" stroke="#fff" stroke-width="1"/>
+          <rect x="95" y="45" width="40" height="30" fill="#ffab91" stroke="#fff" stroke-width="1"/>
+          <text x="30" y="25" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="8">A</text>
+          <text x="97" y="25" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="8">B</text>
+          <text x="22" y="62" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="8">C</text>
+          <text x="67" y="62" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="8">D</text>
+          <text x="115" y="62" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="8">E</text>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          Treemap
+        </text>
+      </g>
+      
+      <!-- Word Cloud (Unchanged) -->
+      <g id="wordcloud" transform="translate(630, 500)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#ff7043" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <text x="40" y="30" fill="#ff5722" font-family="Arial, sans-serif" font-size="16" font-weight="bold">DATA</text>
+          <text x="100" y="25" fill="#ff7043" font-family="Arial, sans-serif" font-size="12">analysis</text>
+          <text x="25" y="50" fill="#d84315" font-family="Arial, sans-serif" font-size="10">science</text>
+          <text x="80" y="45" fill="#ff8a65" font-family="Arial, sans-serif" font-size="14">python</text>
+          <text x="30" y="70" fill="#ffab91" font-family="Arial, sans-serif" font-size="8">statistics</text>
+          <text x="95" y="65" fill="#ff7043" font-family="Arial, sans-serif" font-size="11">machine</text>
+          <text x="110" y="80" fill="#ff5722" font-family="Arial, sans-serif" font-size="9">learning</text>
+          <text x="15" y="85" fill="#d84315" font-family="Arial, sans-serif" font-size="7">visualization</text>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+          Word Cloud
+        </text>
+      </g>
+    </g>
+    
+    <!-- Missing Value Analysis Subsection -->
+    <g id="missingSubsection">
+      <rect x="820" y="200" width="300" height="40" rx="10" fill="url(#dataQualityGradient)" opacity="0.2"/>
+      <text x="970" y="225" text-anchor="middle" fill="url(#dataQualityGradient)" font-family="Arial, sans-serif" font-size="20">
+        Missing Value Analysis
+      </text>
+      
+      <!-- Missingno Matrix (New) -->
+      <g id="missingnoMatrix" transform="translate(820, 260)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#26a69a" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <rect x="10" y="10" width="20" height="10" fill="#26a69a"/>
+          <rect x="35" y="10" width="20" height="10" fill="#00897b"/>
+          <rect x="60" y="10" width="20" height="10" fill="none" stroke="#fff" stroke-width="1"/>
+          <rect x="85" y="10" width="20" height="10" fill="#26a69a"/>
+          <rect x="10" y="25" width="20" height="10" fill="#00897b"/>
+          <rect x="35" y="25" width="20" height="10" fill="none" stroke="#fff" stroke-width="1"/>
+          <rect x="60" y="25" width="20" height="10" fill="#26a69a"/>
+          <rect x="85" y="25" width="20" height="10" fill="#00897b"/>
+          <rect x="10" y="40" width="20" height="10" fill="none" stroke="#fff" stroke-width="1"/>
+          <rect x="35" y="40" width="20" height="10" fill="#26a69a"/>
+          <rect x="60" y="40" width="20" height="10" fill="#00897b"/>
+          <rect x="85" y="40" width="20" height="10" fill="none" stroke="#fff" stroke-width="1"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+          Missingno Matrix
+        </text>
+      </g>
+      
+      <!-- Missingno Heatmap (New) -->
+      <g id="missingnoHeatmap" transform="translate(1000, 260)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#26a69a" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <rect x="10" y="10" width="20" height="20" fill="#26a69a" opacity="0.8"/>
+          <rect x="35" y="10" width="20" height="20" fill="#00897b" opacity="0.6"/>
+          <rect x="60" y="10" width="20" height="20" fill="#26a69a" opacity="0.4"/>
+          <rect x="85" y="10" width="20" height="20" fill="#00897b" opacity="0.2"/>
+          <rect x="10" y="35" width="20" height="20" fill="#00897b" opacity="0.4"/>
+          <rect x="35" y="35" width="20" height="20" fill="#26a69a" opacity="0.8"/>
+          <rect x="60" y="35" width="20" height="20" fill="#00897b" opacity="0.6"/>
+          <rect x="85" y="35" width="20" height="20" fill="#26a69a" opacity="0.4"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+          Missingno Heatmap
+        </text>
+      </g>
+      
+      <!-- Missingno Bar Plot (New) -->
+      <g id="missingnoBar" transform="translate(820, 380)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#26a69a" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <rect x="15" y="50" width="15" height="30" fill="#26a69a"/>
+          <rect x="35" y="35" width="15" height="45" fill="#00897b"/>
+          <rect x="55" y="60" width="15" height="20" fill="#26a69a"/>
+          <rect x="75" y="25" width="15" height="55" fill="#00897b"/>
+          <rect x="95" y="55" width="15" height="25" fill="#26a69a"/>
+          <line x1="12" y1="82" x2="115" y2="82" stroke="#fff" stroke-width="1"/>
+          <line x1="12" y1="15" x2="12" y2="82" stroke="#fff" stroke-width="1"/>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+          Missingno Bar Plot
+        </text>
+      </g>
+      
+      <!-- Missingno Dendrogram (New) -->
+      <g id="missingnoDendrogram" transform="translate(1000, 380)">
+        <rect width="160" height="100" rx="10" fill="url(#cardGradient)" stroke="#26a69a" stroke-width="1"/>
+        <g transform="translate(15, 15)">
+          <path d="M20,70 H40 V50 H60 V70 H80 M40,50 V30 H80 M60,50 V10 H80" stroke="#26a69a" stroke-width="2" fill="none"/>
+          <text x="15" y="75" fill="#fff" font-family="Arial, sans-serif" font-size="8">A</text>
+          <text x="55" y="75" fill="#fff" font-family="Arial, sans-serif" font-size="8">B</text>
+          <text x="95" y="75" fill="#fff" font-family="Arial, sans-serif" font-size="8">C</text>
+        </g>
+        <text x="80" y="90" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="10" font-weight="bold">
+          Missingno Dendrogram
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,201 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4fc3f7"/>
+      <stop offset="50%" style="stop-color:#29b6f6"/>
+      <stop offset="100%" style="stop-color:#03a9f4"/>
+    </linearGradient>
+    
+    <linearGradient id="kdeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#66bb6a;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#4caf50;stop-opacity:0.9"/>
+    </linearGradient>
+    
+    <linearGradient id="histGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff7043;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#ff5722;stop-opacity:0.7"/>
+    </linearGradient>
+    
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3748;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#1a202c;stop-opacity:0.95"/>
+    </linearGradient>
+    
+    <!-- Glow Filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Drop Shadow -->
+    <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Arrow Marker -->
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4fc3f7"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGradient)"/>
+  
+  <!-- Main Title -->
+  <text x="600" y="50" text-anchor="middle" fill="url(#titleGradient)" font-family="Arial, sans-serif" font-size="36" font-weight="bold" filter="url(#glow)">
+    KDE WITH HISTOGRAM OVERLAY
+  </text>
+  <text x="600" y="75" text-anchor="middle" fill="#81c784" font-family="Arial, sans-serif" font-size="16" opacity="0.8">
+    Visualizing Data Distribution
+  </text>
+  
+  <!-- Main Plot -->
+  <g id="mainPlot" transform="translate(150, 150)">
+    <!-- Background Card -->
+    <rect x="-20" y="-20" width="900" height="350" rx="15" fill="url(#cardGradient)" filter="url(#dropshadow)"/>
+    
+    <!-- Axes -->
+    <line x1="50" y1="300" x2="800" y2="300" stroke="#999" stroke-width="3"/> <!-- X-Axis -->
+    <line x1="50" y1="50" x2="50" y2="300" stroke="#999" stroke-width="3"/> <!-- Y-Axis (Density) -->
+    <line x1="800" y1="50" x2="800" y2="300" stroke="#999" stroke-width="3"/> <!-- Y-Axis (Frequency) -->
+    
+    <!-- Scale Markers -->
+    <g id="scaleMarkers">
+      <!-- X-Axis -->
+      <line x1="50" y1="300" x2="50" y2="310" stroke="#ccc" stroke-width="2"/>
+      <text x="50" y="325" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="14">0</text>
+      
+      <line x1="200" y1="300" x2="200" y2="310" stroke="#ccc" stroke-width="2"/>
+      <text x="200" y="325" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="14">10</text>
+      
+      <line x1="350" y1="300" x2="350" y2="310" stroke="#ccc" stroke-width="2"/>
+      <text x="350" y="325" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="14">20</text>
+      
+      <line x1="500" y1="300" x2="500" y2="310" stroke="#ccc" stroke-width="2"/>
+      <text x="500" y="325" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="14">30</text>
+      
+      <line x1="650" y1="300" x2="650" y2="310" stroke="#ccc" stroke-width="2"/>
+      <text x="650" y="325" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="14">40</text>
+      
+      <line x1="800" y1="300" x2="800" y2="310" stroke="#ccc" stroke-width="2"/>
+      <text x="800" y="325" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="14">50</text>
+      
+      <!-- Y-Axis (Density, Left) -->
+      <line x1="50" y1="300" x2="40" y2="300" stroke="#ccc" stroke-width="2"/>
+      <text x="35" y="305" text-anchor="end" fill="#ccc" font-family="Arial, sans-serif" font-size="14">0</text>
+      
+      <line x1="50" y1="200" x2="40" y2="200" stroke="#ccc" stroke-width="2"/>
+      <text x="35" y="205" text-anchor="end" fill="#ccc" font-family="Arial, sans-serif" font-size="14">0.05</text>
+      
+      <line x1="50" y1="100" x2="40" y2="100" stroke="#ccc" stroke-width="2"/>
+      <text x="35" y="105" text-anchor="end" fill="#ccc" font-family="Arial, sans-serif" font-size="14">0.1</text>
+      
+      <!-- Y-Axis (Frequency, Right) -->
+      <line x1="800" y1="300" x2="810" y2="300" stroke="#ccc" stroke-width="2"/>
+      <text x="815" y="305" text-anchor="start" fill="#ccc" font-family="Arial, sans-serif" font-size="14">0</text>
+      
+      <line x1="800" y1="200" x2="810" y2="200" stroke="#ccc" stroke-width="2"/>
+      <text x="815" y="205" text-anchor="start" fill="#ccc" font-family="Arial, sans-serif" font-size="14">5</text>
+      
+      <line x1="800" y1="100" x2="810" y2="100" stroke="#ccc" stroke-width="2"/>
+      <text x="815" y="105" text-anchor="start" fill="#ccc" font-family="Arial, sans-serif" font-size="14">10</text>
+    </g>
+    
+    <!-- Histogram -->
+    <g id="histogram">
+      <rect x="50" y="275" width="75" height="25" fill="url(#histGradient)" stroke="#ff5722" stroke-width="1"/>
+      <rect x="125" y="250" width="75" height="50" fill="url(#histGradient)" stroke="#ff5722" stroke-width="1"/>
+      <rect x="200" y="200" width="75" height="100" fill="url(#histGradient)" stroke="#ff5722" stroke-width="1"/>
+      <rect x="275" y="150" width="75" height="150" fill="url(#histGradient)" stroke="#ff5722" stroke-width="1"/>
+      <rect x="350" y="100" width="75" height="200" fill="url(#histGradient)" stroke="#ff5722" stroke-width="1"/>
+      <rect x="425" y="125" width="75" height="175" fill="url(#histGradient)" stroke="#ff5722" stroke-width="1"/>
+      <rect x="500" y="175" width="75" height="125" fill="url(#histGradient)" stroke="#ff5722" stroke-width="1"/>
+      <rect x="575" y="225" width="75" height="75" fill="url(#histGradient)" stroke="#ff5722" stroke-width="1"/>
+      <rect x="650" y="250" width="75" height="50" fill="url(#histGradient)" stroke="#ff5722" stroke-width="1"/>
+      <rect x="725" y="275" width="75" height="25" fill="url(#histGradient)" stroke="#ff5722" stroke-width="1"/>
+    </g>
+    
+    <!-- KDE Curve -->
+    <path d="M50,300 C90,290 120,260 162,250 C200,240 220,200 237,175 C260,140 300,120 350,110 C400,100 420,130 450,150 C480,170 500,200 525,220 C550,240 600,250 650,260 C700,270 750,285 800,300"
+          fill="none" stroke="url(#kdeGradient)" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Rug Plot (Data Points) -->
+    <g id="rugPlot">
+      <line x1="75" y1="300" x2="75" y2="310" stroke="#ff7043" stroke-width="2"/>
+      <line x1="150" y1="300" x2="150" y2="310" stroke="#ff7043" stroke-width="2"/>
+      <line x1="200" y1="300" x2="200" y2="310" stroke="#ff7043" stroke-width="2"/>
+      <line x1="250" y1="300" x2="250" y2="310" stroke="#ff7043" stroke-width="2"/>
+      <line x1="300" y1="300" x2="300" y2="310" stroke="#ff7043" stroke-width="2"/>
+      <line x1="350" y1="300" x2="350" y2="310" stroke="#ff7043" stroke-width="2"/>
+      <line x1="400" y1="300" x2="400" y2="310" stroke="#ff7043" stroke-width="2"/>
+      <line x1="450" y1="300" x2="450" y2="310" stroke="#ff7043" stroke-width="2"/>
+      <line x1="500" y1="300" x2="500" y2="310" stroke="#ff7043" stroke-width="2"/>
+      <line x1="550" y1="300" x2="550" y2="310" stroke="#ff7043" stroke-width="2"/>
+      <line x1="600" y1="300" x2="600" y2="310" stroke="#ff7043" stroke-width="2"/>
+    </g>
+    
+    <!-- Annotations -->
+    <!-- KDE Curve -->
+    <line x1="350" y1="100" x2="350" y2="80" stroke="#4fc3f7" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="350" y="70" text-anchor="middle" fill="#4fc3f7" font-family="Arial, sans-serif" font-size="14" font-weight="bold">KDE Curve</text>
+    <text x="350" y="50" text-anchor="middle" fill="#ccc" font-family="Arial, sans-serif" font-size="12">Smoothed density</text>
+    
+    <!-- Histogram -->
+    <line x1="425" y1="150" x2="425" y2="130" stroke="#ff7043" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="425" y="120" text-anchor="middle" fill="#ff7043" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Histogram</text>
+    <text x="425" y="100" text-anchor="middle" fill="#ffab91" font-family="Arial, sans-serif" font-size="12">Binned frequencies</text>
+    
+    <!-- Bandwidth -->
+    <line x1="500" y1="200" x2="520" y2="180" stroke="#81c784" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="530" y="170" text-anchor="start" fill="#81c784" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Bandwidth</text>
+    <text x="530" y="185" text-anchor="start" fill="#a5d6a7" font-family="Arial, sans-serif" font-size="12">Controls KDE smoothness</text>
+    
+    <!-- Rug Plot -->
+    <line x1="200" y1="310" x2="180" y2="330" stroke="#ff7043" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="170" y="340" text-anchor="end" fill="#ff7043" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Data Points</text>
+    <text x="170" y="355" text-anchor="end" fill="#ffab91" font-family="Arial, sans-serif" font-size="12">Underlying data</text>
+  </g>
+  
+  <!-- Key Insights Panel -->
+  <g id="insightsPanel" transform="translate(50, 550)">
+    <rect x="0" y="0" width="1100" height="200" rx="15" fill="url(#cardGradient)" filter="url(#dropshadow)"/>
+    
+    <text x="550" y="30" text-anchor="middle" fill="#4fc3f7" font-family="Arial, sans-serif" font-size="20" font-weight="bold">
+      KEY INSIGHTS
+    </text>
+    
+    <!-- Left Column -->
+    <g id="leftColumn">
+      <text x="50" y="60" fill="#66bb6a" font-family="Arial, sans-serif" font-size="16" font-weight="bold">📊 KDE &amp; Histogram</text>
+      <text x="70" y="85" fill="#ccc" font-family="Arial, sans-serif" font-size="14">• KDE: Smoothed density</text>
+      <text x="70" y="105" fill="#ccc" font-family="Arial, sans-serif" font-size="14">• Histogram: Binned counts</text>
+      <text x="70" y="125" fill="#ccc" font-family="Arial, sans-serif" font-size="14">• Bandwidth = 2 (smoothing)</text>
+      <text x="70" y="145" fill="#ccc" font-family="Arial, sans-serif" font-size="14">• Bin width = 5</text>
+    </g>
+    
+    <!-- Right Column -->
+    <g id="rightColumn">
+      <text x="570" y="60" fill="#ff7043" font-family="Arial, sans-serif" font-size="16" font-weight="bold">🎯 Data Insights</text>
+      <text x="590" y="85" fill="#ccc" font-family="Arial, sans-serif" font-size="14">• Unimodal, peak at ~25</text>
+      <text x="590" y="105" fill="#ccc" font-family="Arial, sans-serif" font-size="14">• Slightly right-skewed</text>
+      <text x="590" y="125" fill="#ccc" font-family="Arial, sans-serif" font-size="14">• Most data: 20–35</text>
+      <text x="590" y="145" fill="#ccc" font-family="Arial, sans-serif" font-size="14">• Sparse at extremes</text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <rect x="0" y="770" width="1200" height="30" fill="url(#titleGradient)" opacity="0.1"/>
+  <text x="600" y="790" text-anchor="middle" fill="#4fc3f7" font-family="Arial, sans-serif" font-size="12" opacity="0.7">
+    Professional KDE and Histogram Visualization Guide
+  </text>
+</svg>

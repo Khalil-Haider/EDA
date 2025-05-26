@@ -1,0 +1,246 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Premium gradient definitions -->
+  <defs>
+    <!-- Background gradients -->
+    <radialGradient id="bgGradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#fdfbfb;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f1f5f9;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Count Plot Gradients -->
+    <linearGradient id="countGradient1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="countGradient2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="countGradient3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="countGradient4" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Bar Plot Gradients -->
+    <linearGradient id="barGradient1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="barGradient2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="barGradient3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff9a9e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fecfef;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="barGradient4" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#a1c4fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c2e9fb;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Text gradients -->
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadows -->
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGradient)"/>
+  
+  <!-- Main title -->
+  <text x="600" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="url(#titleGradient)" filter="url(#glow)">
+    Bar Plot vs Count Plot: Visual Comparison
+  </text>
+  
+  <!-- Count Plot Section -->
+  <g>
+    <!-- Count Plot Background -->
+    <rect x="50" y="80" width="500" height="320" fill="white" stroke="#e2e8f0" stroke-width="2" rx="15" filter="url(#shadow)"/>
+    
+    <!-- Count Plot Title -->
+    <text x="300" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#headerGradient)">
+      COUNT PLOT
+    </text>
+    
+    <!-- Count Plot Description -->
+    <text x="300" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#64748b" font-weight="500">
+      Shows frequency/count of each category
+    </text>
+    
+    <!-- Count Plot Axes -->
+    <line x1="100" y1="350" x2="450" y2="350" stroke="#374151" stroke-width="2"/>
+    <line x1="100" y1="180" x2="100" y2="350" stroke="#374151" stroke-width="2"/>
+    
+    <!-- Count Plot Bars -->
+    <rect x="120" y="250" width="60" height="100" fill="url(#countGradient1)" rx="5"/>
+    <rect x="200" y="200" width="60" height="150" fill="url(#countGradient2)" rx="5"/>
+    <rect x="280" y="220" width="60" height="130" fill="url(#countGradient3)" rx="5"/>
+    <rect x="360" y="180" width="60" height="170" fill="url(#countGradient4)" rx="5"/>
+    
+    <!-- Count Plot Labels -->
+    <text x="150" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Mon</text>
+    <text x="230" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Tue</text>
+    <text x="310" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Wed</text>
+    <text x="390" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Thu</text>
+    
+    <!-- Count Plot Y-axis -->
+    <text x="85" y="355" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">0</text>
+    <text x="85" y="315" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">5</text>
+    <text x="85" y="275" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">10</text>
+    <text x="85" y="235" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">15</text>
+    <text x="85" y="195" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">20</text>
+    
+    <!-- Count Plot Axis Labels -->
+    <text x="275" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">
+      Days of Week (Categories)
+    </text>
+    <text x="50" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" transform="rotate(-90, 50, 265)">
+      Count/Frequency
+    </text>
+  </g>
+  
+  <!-- Bar Plot Section -->
+  <g>
+    <!-- Bar Plot Background -->
+    <rect x="650" y="80" width="500" height="320" fill="white" stroke="#e2e8f0" stroke-width="2" rx="15" filter="url(#shadow)"/>
+    
+    <!-- Bar Plot Title -->
+    <text x="900" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="url(#headerGradient)">
+      BAR PLOT
+    </text>
+    
+    <!-- Bar Plot Description -->
+    <text x="900" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#64748b" font-weight="500">
+      Shows mean/average of numeric values per category
+    </text>
+    
+    <!-- Bar Plot Axes -->
+    <line x1="700" y1="350" x2="1050" y2="350" stroke="#374151" stroke-width="2"/>
+    <line x1="700" y1="180" x2="700" y2="350" stroke="#374151" stroke-width="2"/>
+    
+    <!-- Bar Plot Bars -->
+    <rect x="720" y="230" width="60" height="120" fill="url(#barGradient1)" rx="5"/>
+    <rect x="800" y="190" width="60" height="160" fill="url(#barGradient2)" rx="5"/>
+    <rect x="880" y="240" width="60" height="110" fill="url(#barGradient3)" rx="5"/>
+    <rect x="960" y="210" width="60" height="140" fill="url(#barGradient4)" rx="5"/>
+    
+    <!-- Bar Plot Labels -->
+    <text x="750" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Mon</text>
+    <text x="830" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Tue</text>
+    <text x="910" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Wed</text>
+    <text x="990" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="600" fill="#1e293b">Thu</text>
+    
+    <!-- Bar Plot Y-axis -->
+    <text x="685" y="355" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">$0</text>
+    <text x="685" y="315" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">$15</text>
+    <text x="685" y="275" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">$30</text>
+    <text x="685" y="235" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">$45</text>
+    <text x="685" y="195" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#64748b">$60</text>
+    
+    <!-- Bar Plot Axis Labels -->
+    <text x="875" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b">
+      Days of Week (Categories)
+    </text>
+    <text x="650" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1e293b" transform="rotate(-90, 650, 265)">
+      Average Bill ($)
+    </text>
+  </g>
+  
+  <!-- Comparison Table -->
+  <g>
+    <!-- Table Background -->
+    <rect x="100" y="450" width="1000" height="300" fill="white" stroke="#e2e8f0" stroke-width="2" rx="15" filter="url(#shadow)"/>
+    
+    <!-- Table Title -->
+    <text x="600" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="url(#titleGradient)">
+      Key Differences Summary
+    </text>
+    
+    <!-- Table Headers -->
+    <rect x="120" y="510" width="150" height="40" fill="url(#headerGradient)" rx="5"/>
+    <rect x="290" y="510" width="150" height="40" fill="url(#headerGradient)" rx="5"/>
+    <rect x="460" y="510" width="150" height="40" fill="url(#headerGradient)" rx="5"/>
+    <rect x="630" y="510" width="150" height="40" fill="url(#headerGradient)" rx="5"/>
+    <rect x="800" y="510" width="150" height="40" fill="url(#headerGradient)" rx="5"/>
+    <rect x="970" y="510" width="110" height="40" fill="url(#headerGradient)" rx="5"/>
+    
+    <text x="195" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Plot Type</text>
+    <text x="365" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Data Type</text>
+    <text x="535" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Shows</text>
+    <text x="705" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">X-axis</text>
+    <text x="875" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Y-axis</text>
+    <text x="1025" y="535" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Used For</text>
+    
+    <!-- Count Plot Row -->
+    <rect x="120" y="570" width="150" height="60" fill="#f8fafc" stroke="#e2e8f0" rx="5"/>
+    <rect x="290" y="570" width="150" height="60" fill="#f8fafc" stroke="#e2e8f0" rx="5"/>
+    <rect x="460" y="570" width="150" height="60" fill="#f8fafc" stroke="#e2e8f0" rx="5"/>
+    <rect x="630" y="570" width="150" height="60" fill="#f8fafc" stroke="#e2e8f0" rx="5"/>
+    <rect x="800" y="570" width="150" height="60" fill="#f8fafc" stroke="#e2e8f0" rx="5"/>
+    <rect x="970" y="570" width="110" height="60" fill="#f8fafc" stroke="#e2e8f0" rx="5"/>
+    
+    <text x="195" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#667eea">Count Plot</text>
+    <text x="365" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">Categorical</text>
+    <text x="535" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151">Count of each</text>
+    <text x="535" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151">category</text>
+    <text x="705" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">Category</text>
+    <text x="875" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">Count</text>
+    <text x="1025" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">Frequency of</text>
+    <text x="1025" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">categories</text>
+    
+    <!-- Bar Plot Row -->
+    <rect x="120" y="650" width="150" height="60" fill="#fef7ff" stroke="#e2e8f0" rx="5"/>
+    <rect x="290" y="650" width="150" height="60" fill="#fef7ff" stroke="#e2e8f0" rx="5"/>
+    <rect x="460" y="650" width="150" height="60" fill="#fef7ff" stroke="#e2e8f0" rx="5"/>
+    <rect x="630" y="650" width="150" height="60" fill="#fef7ff" stroke="#e2e8f0" rx="5"/>
+    <rect x="800" y="650" width="150" height="60" fill="#fef7ff" stroke="#e2e8f0" rx="5"/>
+    <rect x="970" y="650" width="110" height="60" fill="#fef7ff" stroke="#e2e8f0" rx="5"/>
+    
+    <text x="195" y="670" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f093fb">Bar Plot</text>
+    <text x="365" y="665" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151">Categorical +</text>
+    <text x="365" y="680" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151">Numeric</text>
+    <text x="535" y="665" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">Mean or sum of</text>
+    <text x="535" y="680" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">numeric values</text>
+    <text x="705" y="670" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">Category</text>
+    <text x="875" y="665" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#374151">Mean/Total</text>
+    <text x="1025" y="665" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">Summarizing</text>
+    <text x="1025" y="680" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#374151">groups</text>
+  </g>
+  
+  <!-- Key Learning Points -->
+  <text x="600" y="780" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="url(#titleGradient)" filter="url(#glow)">
+    🏆 Key Insight: Count Plot = "How many?" | Bar Plot = "What's the average?"
+  </text>
+</svg>
